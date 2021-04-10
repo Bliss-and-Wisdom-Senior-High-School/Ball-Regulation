@@ -10,13 +10,15 @@ import java.io.RandomAccessFile;
 import java.util.Calendar;
 import java.util.Stack;
 
+
+
 public class Main extends JFrame {
     static int x=20;
     static int y=10;
     static int width=1500;
     static int height=800;
 
-//    Calendar calendar = Calendar.getInstance();
+    //    Calendar calendar = Calendar.getInstance();
     RandomAccessFile d = new RandomAccessFile("storage.txt","rw");
 
     Stack<String> previous = new Stack<>();
@@ -59,17 +61,17 @@ public class Main extends JFrame {
     JLabel lblSearch = new JLabel("查看: ");
     JLabel lblTime = new JLabel();
     JLabel lblSenior = new JLabel("高中");
-    JLabel lblJunior = new JLabel("国中");
+    JLabel lblJunior = new JLabel("國中");
 
-    JLabel lblNotDone = new JLabel("此页面尚未完成！ 请见谅");
+    JLabel lblNotDone = new JLabel("此頁面尚未完成！ 請見諒");
 
     JButton btnHome = new JButton("主頁面");
-    JButton btnHistory = new JButton("历史纪录");
+    JButton btnHistory = new JButton("歷史紀錄");
     JButton btnClass = new JButton("班级");
-    JButton btnScore = new JButton("点数");
-    JButton btnTimeTable = new JButton("时间表");
-    JButton btnSetting = new JButton("设定");
-    JButton btnOK = new JButton("确定");
+    JButton btnScore = new JButton("點數");
+    JButton btnTimeTable = new JButton("時間表");
+    JButton btnSetting = new JButton("設定");
+    JButton btnOK = new JButton("確定");
     JButton btnBack = new JButton("返回");
     JButton btnNext =new JButton("下一頁");
 
@@ -96,7 +98,7 @@ public class Main extends JFrame {
 
     JPanel pnlWeekend=new JPanel();
     JPanel pnlWeekendResult = new JPanel();
-//    JPanel pnlSenior=new JPanel();
+    //    JPanel pnlSenior=new JPanel();
 //    JPanel pnlJunior=new JPanel();
     JPanel[][] pnlSeniorOrder= new JPanel[5][3];
     JPanel[][] PnlJuniorOrder=new JPanel[5][3];
@@ -121,7 +123,7 @@ public class Main extends JFrame {
         //视窗
         this.setSize(width,height);
         this.setLocation(x,y);
-        this.setTitle("学务处借球登记　超ＯＰ by 兩本書&一只羊");
+        this.setTitle("學務處借球登记　超ＯＰ Fy 兩本書&一只羊");
         BorderLayout thisLayout = new BorderLayout(50,60);
         this.setLayout(thisLayout);
 
@@ -151,7 +153,7 @@ public class Main extends JFrame {
         pnlNE1.setLayout(new GridLayout());
 
         //时间
-        lblTime.setText("民国"+school.getYear()+"年"+school.getMonth()+"月"+school.getDate()+"日 星期"+school.getDay());
+        lblTime.setText("民國"+school.getYear()+"年"+school.getMonth()+"月"+school.getDate()+"日 星期"+school.getDay());
         pnlDate.add(lblTime);
         pnlNE1.add(pnlDate);
 
@@ -433,7 +435,7 @@ public class Main extends JFrame {
             this.setBackground(Color.RED);
             this.setFont(new Font("新细明體",Font.BOLD,100));
 
-            this.setText(" 此页面尚未完成！ 请见谅");
+            this.setText(" 此頁面尚未完成！ 請見諒");
 
         }
     }
