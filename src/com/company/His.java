@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Objects;
 
 public class His {
     private Calendar time;
@@ -29,12 +28,18 @@ public class His {
     }
 
 
-    public Class getCourt ( School sch, String crt , int index) {
+    public String getCourt ( School sch, String crt , int index) {
         for (int i=0; i<sch.getBallKinds(); i++) {
-            if (Objects.equals(sch.getBall(i).getName(), crt))
-                return sch.getClass(hisCourt.get(i).get(index));
+            if (crt.equals(sch.getBall(i).getName())) {
+                return hisCourt.get(i).get(index);
+            }
         }
         return null;
+    }
+
+    public String getCourt (School sch, String crt) {
+
+
     }
 
     public Calendar getTime() {
